@@ -63,7 +63,7 @@ save it <a href=\"../e2generated/$username"."_index.zip\">here</a>.\n";
 
     ## New search. Create main file.
 
-    open(NODEFILE, ">$outputfilename");
+    open(NODEFILE, ">$outputfilename") or die "Couldn't open: $! \n"; 
     print NODEFILE htmlheader();
     print NODEFILE "<center><big>Writeups by $username</big><br>Snapshot taken: $sysdate</center><br><br>\n";
     close(NODEFILE);
